@@ -84,6 +84,7 @@ body {
 .specialize h1 {
     font-family: "Quattrocento", serif;
     font-size: 39.2px;
+    text-align: center;
 }
 .specialize strong {
     font-family: "Dancing Script", cursive;
@@ -100,31 +101,41 @@ body {
     text-transform: uppercase;
     text-align: center;
 }
-.imgSec {
+/* .imgSec {
     height: 250px;
     width: 250px;
     border-radius: 15px;
     transition: all 1s ease !important;
+} */
+.imgSec {
+    padding-bottom: 15px;
 }
 .imgSec img {
     height: 100%;
     width: 100%;
     object-fit: cover;
     border-radius: 15px;
+    transition: all 1s ease !important;
 }
-.imgSec:hover {
-    transform: scale(1.1) !important;
+.imgSec img:hover {
+    transform: scale(1.02) !important;
     box-shadow: rgba(17, 17, 26, 0.2) 0px 8px 24px,
         rgba(17, 17, 26, 0.2) 0px 16px 56px, rgba(17, 17, 26, 0.2) 0px 24px 80px;
     transition: all 1s ease !important;
 }
-.featureSection {
+/* .featureSection {
     display: grid;
     gap: 25px;
     width: 100%;
     place-items: center;
     grid-template-columns: repeat(4, 1fr);
     padding-top: 50px;
+} */
+.featureSection {
+    columns: 3;
+    padding: 15px;
+    padding-top: 50px;
+    column-gap: 15px;
 }
 footer {
     background: #d5d4d2;
@@ -136,4 +147,30 @@ footer {
 }
 footer p {
     text-align: center;
+}
+.hamburger {
+    display: none;
+}
+@media (max-width: 768px) {
+    .featureSection {
+        columns: 2;
+    }
+    .overlaySlogan {
+        width: 96%;
+        padding-left: 0px;
+        font-size: 45px;
+        text-align: center;
+        font-weight: 600;
+        line-height: 52px;
+        letter-spacing: 1px;
+    }
+    .menuSection {
+        display: none;
+    }
+    .toolSection {
+        display: none;
+    }
+    .hamburger {
+        display: block;
+    }
 }
